@@ -1,0 +1,53 @@
+.principal-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.welcome-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.description {
+    font-size: 16px;
+    color: #666;
+}
+
+.options-list {
+    list-style: none;
+    padding: 0;
+}
+
+.options-list li {
+    margin: 10px 0;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.login-btn {
+    background: #007BFF;
+}
+
+.register-btn {
+    background: #28a745;
+}

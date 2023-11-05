@@ -1,0 +1,54 @@
+.divGeneralLoggin {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.divGeneralLoggin h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.divGeneralLoggin form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+
+.divGeneralLoggin label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.divGeneralLoggin input,
+.divGeneralLoggin button {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%; /* Ocupa todo el ancho disponible */
+}
+
+.divGeneralLoggin button {
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.divGeneralLoggin button:hover {
+    background: #0056b3;
+}
+.field-container{
+    width: 80%;
+}
