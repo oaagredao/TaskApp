@@ -7,34 +7,33 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import java.util.List;
 
-
 /**
  * The persistent class for the users database table.
  * 
  */
 @Entity
-@Table(name="users")
-@NamedQuery(name="User.findAll", query="SELECT u FROM User u")
+@Table(name = "users")
+@NamedQuery(name = "User.findAll", query = "SELECT u FROM User u")
 public class User implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name="user_id")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "user_id")
 	private int userId;
 
-	@Column(name="first_name")
+	@Column(name = "first_name")
 	private String firstName;
 
-	@Column(name="last_name")
+	@Column(name = "last_name")
 	private String lastName;
 
 	private String password;
 
 	private String username;
 
-	//bi-directional many-to-one association to Task
-	@OneToMany(mappedBy="user")
+	// bi-directional many-to-one association to Task
+	@OneToMany(mappedBy = "user")
 	@JsonIgnore
 	private List<Task> tasks;
 

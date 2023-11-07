@@ -6,12 +6,11 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-
 // anotaciones para mapear las clases
 
-@ComponentScan(basePackages =  {"controller","dao","services"})
-@EntityScan(basePackages = {"model"})
-@EnableJpaRepositories(basePackages = {"dao"})
+@ComponentScan(basePackages = { "controller", "dao", "services" })
+@EntityScan(basePackages = { "model" })
+@EnableJpaRepositories(basePackages = { "dao" })
 @SpringBootApplication
 public class MicroservicioMysqlTaskApplication {
 
