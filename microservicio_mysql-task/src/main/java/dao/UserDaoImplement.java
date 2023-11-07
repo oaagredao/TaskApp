@@ -9,14 +9,14 @@ import model.User;
 
 @Repository
 public class UserDaoImplement implements UserDaoInterfaz {
-	
+
 	@Autowired
 	UserJpaSpring userSpring;
 
 	@Override
 	public void agregarUsuario(User usuario) {
 		userSpring.save(usuario);
-		
+
 	}
 
 	@Override
@@ -27,7 +27,7 @@ public class UserDaoImplement implements UserDaoInterfaz {
 	@Override
 	public void eliminarUsuario(String username) {
 		userSpring.eliminarUsuario(username);
-		
+
 	}
 
 	@Override
@@ -38,7 +38,7 @@ public class UserDaoImplement implements UserDaoInterfaz {
 	@Override
 	public void eliminarUsuario(int idUsuario) {
 		userSpring.deleteById(idUsuario);
-		
+
 	}
 
 	@Override
@@ -49,7 +49,12 @@ public class UserDaoImplement implements UserDaoInterfaz {
 	@Override
 	public void actualizarUsuario(User usuario) {
 		userSpring.save(usuario);
-		
+
+	}
+
+	@Override
+	public User recuperarUsuarioContraseña(String password) {
+		return userSpring.findByPassword(password);
 	}
 
 }

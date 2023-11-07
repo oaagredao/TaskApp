@@ -4,24 +4,23 @@ import java.io.Serializable;
 import javax.persistence.*;
 import java.util.Date;
 
-
 /**
  * The persistent class for the tasks database table.
  * 
  */
 @Entity
-@Table(name="tasks")
-@NamedQuery(name="Task.findAll", query="SELECT t FROM Task t")
+@Table(name = "tasks")
+@NamedQuery(name = "Task.findAll", query = "SELECT t FROM Task t")
 public class Task implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name="task_id")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "task_id")
 	private int taskId;
 
 	@Temporal(TemporalType.DATE)
-	@Column(name="due_date")
+	@Column(name = "due_date")
 	private Date dueDate;
 
 	private String estatus;
@@ -29,14 +28,14 @@ public class Task implements Serializable {
 	private String priority;
 
 	@Lob
-	@Column(name="task_description")
+	@Column(name = "task_description")
 	private String taskDescription;
 
 	private String title;
 
-	//bi-directional many-to-one association to User
+	// bi-directional many-to-one association to User
 	@ManyToOne
-	@JoinColumn(name="user_id")
+	@JoinColumn(name = "user_id")
 	private User user;
 
 	public Task() {
@@ -97,5 +96,13 @@ public class Task implements Serializable {
 	public void setUser(User user) {
 		this.user = user;
 	}
+
+	@Override
+	public String toString() {
+		return "Task [taskId=" + taskId + ", dueDate=" + dueDate + ", estatus=" + estatus + ", priority=" + priority
+				+ ", taskDescription=" + taskDescription + ", title=" + title + ", user=" + user + "]";
+	}
+
+	// to string
 
 }
