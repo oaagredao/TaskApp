@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import "./Registro.css";
+import {  useNavigate } from 'react-router-dom';
 
 function Registro(props) {
+  // navegador de rutas
+  const navigate = useNavigate();
+
   const minLength = 8;
   const maxLength = 20;
   const [user, setUser] = useState({
@@ -47,6 +51,10 @@ function Registro(props) {
         if (data === "true") {
           // Usuario agregado con éxito
           alert("Usuario agregado con éxito");
+
+          // agregar un movimiento a la ventana de Loggin
+          navigate('/login');
+
         } else {
           // Fallo al agregar el usuario
           alert("Error al agregar el usuario");

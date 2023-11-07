@@ -48,9 +48,13 @@ function LogginInicio(props) {
         }
       })
       .then((data2) => {
-        if (data2 === "Credenciales válidas") {
+        console.log("el valor de data2 es de: ", data2)
+        if (data2 !== "Credenciales inválidas") {
           alert("Credenciales válidas");
           console.log("La verificación en la base de datos fue correcta");
+          // se debe enviar el data2 que es el userid al localStorage
+          localStorage.setItem('userId', data2);
+
           // Realiza acciones si las credenciales son válidas
           navigate('/main'); // Redirige a la interfaz principal
 
