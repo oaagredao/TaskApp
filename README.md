@@ -1,16 +1,11 @@
 # TaskApp
-Este proyecto plantea la creación de una aplicación de tareas con inicio de sesión de usuario, combina la potencia de Spring Boot en el lado del servidor
-y React en el lado del cliente para ofrecer a los usuarios una forma eficiente y segura de gestionar sus tareas diarias.
+This project involves the creation of a task management application with user login, combining the power of Spring Boot on the server side and React on the client side to provide users with an efficient and secure way to manage their daily tasks.
 
-# 2023/11/06 
-#Lo que hay
+#What it has
+Currently, it includes the ability to create a user account, login, create tasks, and categorize them by color according to their importance.
+The login implementation and validations have been done with JavaScript and React.
+Additional validations, HTTP request handling, and database interaction are done using Spring Boot.
 
-Actualmente cuenta con la posibilidad de creación de usuario, loggin, creación de tareas y caracterización de estas por color de acuerdo a su importancia.
-La implementación del loggin y las validaciones han sido hechas con Javascript y react.
-Validaciones adicionales, interacción de peticiones http e interacción con base de datos hecha con spring boot.
-
-#Lo que se va a implementar
-
-Interacción más amigable en el display de las tareas, mejorar conceptos visuales de la pagina principal, implementación de features adicionales con relación al manejo de las tareas.
-Pasar de confirmaciones con Logger a instaurar pruebas unitarias, mejorar seguridad del back, uso de appi para notificaciones de vencimiento de tareas
-
+#Desired
+A more user-friendly interaction for displaying tasks, improving the visual concepts on the main page, and implementing additional features related to task management.
+Transitioning from logger-based confirmations to unit testing, improving backend security, and using an API for task expiration notifications.
